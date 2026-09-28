@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive Syllabus Viewer | PUMO Technovation" />
+  <title>Syllabus Viewer | PUMO TECHNOVATION</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- dFlip 3D Flipbook CSS -->
+  <link href="dflip/css/dflip.min.css" rel="stylesheet" type="text/css">
+  <link href="dflip/css/themify-icons.min.css" rel="stylesheet" type="text/css">
+  
+  <style>
+    :root {
+      --pumo-navy: #0f172a;
+      --pumo-blue: #0d6efd;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+      color: #f8fafc;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top Navigation bar - Absolute positioning for full screen */
+    .viewer-navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      background: transparent;
+      z-index: 1010;
+    }
+
+    .btn-back {
+      background: rgba(255, 255, 255, 0.08);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateX(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .viewer-title {
+      display: none;
+    }
+
+    /* Keep UI balance */
+    .viewer-spacer {
+      width: 140px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .brand-logo {
+      height: 32px;
+      width: auto;
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+    
+    .brand-logo:hover {
+      opacity: 1;
+    }
+
+    /* Flipbook display frame */
+    .flipbook-viewport {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      background: transparent;
+    }
+
+    #flipbook-container {
+      width: 100%;
+      height: 100%;
+      background: transparent !important;
+    }
+
+    /* Customizing internal dFlip elements to match theme */
+    .df-container {
+      background: transparent !important;
+    }
+    
+    .df-container .df-controls {
+      background: rgba(15, 23, 42, 0.85) !important;
+      backdrop-filter: blur(10px) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    /* Loading Overlay */
+    #loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: opacity 0.4s ease;
+      gap: 16px;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255, 255, 255, 0.08);
+      border-top: 3px solid var(--pumo-blue);
+      border-radius: 50%;
+      animation: spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+    }
+
+    .loading-text {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .viewer-navbar {
+        padding: 0 16px;
+        height: 64px;
+      }
+      .btn-back {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+      }
+      .viewer-title {
+        font-size: 0.9rem;
+        margin: 0 10px;
+      }
+      .viewer-spacer {
+        width: 100px;
+      }
+      .brand-logo {
+        height: 24px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <!-- Custom Navigation Header -->
+  <header class="viewer-navbar">
+    <a id="back-link" class="btn-back" href="javascript:void(0);">
+      <span>&larr;</span> Back to Course
+    </a>
+    <h1 id="syllabus-title" class="viewer-title">Syllabus Viewer</h1>
+    <div class="viewer-spacer">
+      <a href="index.html">
+        <img class="brand-logo" src="pumologo.webp" alt="PUMO Logo">
+      </a>
+    </div>
+  </header>
+
+  <!-- Interactive Flipbook Container -->
+  <main class="flipbook-viewport">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+      <div class="loading-text">Preparing 3D Flipbook...</div>
+    </div>
+    
+    <!-- Flipbook Target Element -->
+    <div id="flipbook-container"></div>
+  </main>
+
+  <!-- jQuery (Required by dFlip) -->
+  <script src="dflip/js/libs/jquery.min.js"></script>
+  
+  <!-- PDF.js core library for page checking and rendering -->
+  <script src="dflip/js/libs/pdf.min.js"></script>
+  
+  <!-- dFlip core JS -->
+  <script src="dflip/js/dflip.min.js"></script>
+
+  <script>
+    // Set DearFlip library paths
+    window.DFLIP_LIB_PATH = "dflip/js/libs/";
+    
+    // Set PDF.js worker path
+    if (window.pdfjsLib) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = "dflip/js/libs/pdf.worker.min.js";
+    } else if (window.PDFJS) {
+      window.PDFJS.workerSrc = "dflip/js/libs/pdf.worker.min.js";
+    }
+
+    $(document).ready(function() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var file = urlParams.get('file');
+      var title = urlParams.get('title') || 'Course';
+
+      if (!file) {
+        window.location.href = "courses.html";
+        return;
+      }
+
+      $('#syllabus-title').text(title + ' - Syllabus');
+
+      $('#back-link').on('click', function(e) {
+        e.preventDefault();
+        if (document.referrer && document.referrer.indexOf(window.location.hostname) !== -1) {
+          window.location.href = document.referrer;
+        } else {
+          window.location.href = "courses.html";
+        }
+      });
+
+      // Initialize the standard dFlip flipbook
+      var options = {
+        webgl: true, // Enable Three.js 3D WebGL render
+        height: '100%',
+        width: '100%',
+        autoEnableOutline: false,
+        autoEnableThumbnail: false,
+        overwritePDFOutline: true,
+        duration: 750,
+        soundEnable: true,
+        pageMode: window.innerWidth < 768 ? DFLIP.PAGE_MODE.SINGLE : DFLIP.PAGE_MODE.DOUBLE,
+        onReady: function(flipbook) {
+          $("#loading-overlay").fadeOut(350);
+        }
+      };
+
+      var flipBook = $("#flipbook-container").flipBook(file, options);
+
+      // Handle resize dynamically
+      var resizeTimeout;
+      $(window).on('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+          if (flipBook) {
+            var targetMode = window.innerWidth < 768 ? DFLIP.PAGE_MODE.SINGLE : DFLIP.PAGE_MODE.DOUBLE;
+            if (flipBook.options && flipBook.options.pageMode !== targetMode) {
+              flipBook.options.pageMode = targetMode;
+              if (typeof flipBook.layout === 'function') {
+                flipBook.layout();
+              }
+            }
+          }
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html>

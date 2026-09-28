@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Video Editing | PUMO Technovation Career Guides" />
+  <title>VIDEO EDITING CERTIFIED | PUMO TECHNOVATION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="pumologo.webp" type="image/webp" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Premium Timeline / Syllabus Layout */
+    .timeline-container {
+      position: relative;
+      padding-left: 24px;
+      border-left: 2px dashed rgba(15, 76, 255, 0.15);
+      margin-left: 10px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -33px;
+      top: 10px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0F4CFF 0%, #28C7FA 100%);
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 10px rgba(15, 76, 255, 0.4);
+      z-index: 2;
+    }
+    .syllabus-card {
+      background: #ffffff;
+      border: 1px solid rgba(15, 76, 255, 0.06);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(8, 27, 58, 0.02);
+      transition: all 0.3s ease;
+    }
+    .syllabus-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(15, 76, 255, 0.2);
+      box-shadow: 0 8px 25px rgba(15, 76, 255, 0.08);
+    }
+    .duration-badge {
+      background: linear-gradient(135deg, #0F4CFF 0%, #28C7FA 100%);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 0 4px 10px rgba(15, 76, 255, 0.15);
+    }
+    .syllabus-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      font-family: Poppins, sans-serif;
+    }
+    .syllabus-text {
+      color: #475569;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+    .path-tab-panel {
+      display: none;
+    }
+    .path-tab-panel.active {
+      display: block;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="page-fade">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-75 sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="pumologo.webp" alt="PUMO" style="height:48px; width:auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="course-details-page">
+    <header class="premium-path-hero" style="height: 450px;">
+      <video autoplay muted loop playsinline class="premium-video-bg" poster="1.webp">
+        <source src="PLACEMENT TESTIMONIAL ANNA NAGAR(c) (1).mp4" type="video/mp4">
+      </video>
+      <div class="premium-hero-overlay" style="background: linear-gradient(180deg, rgba(8, 27, 58, 0.6) 0%, rgba(8, 27, 58, 0.5) 100%);"></div>
+      <div class="premium-hero-content" style="padding-bottom: 0;">
+        <div class="course-details-hero-badge mx-auto mb-3" style="width: fit-content; background: rgba(255,255,255,0.18); backdrop-filter: blur(8px); padding: 4px 16px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.25);">
+          <span aria-hidden="true"><i class="bi bi-film"></i></span>
+          <span class="fw-semibold text-white">PUMO Creative Design</span>
+        </div>
+        <h1 class="premium-hero-title" style="font-size: 3rem;">CERTIFIED VIDEO EDITING</h1>
+        <p class="premium-hero-subtitle" style="font-size: 1.15rem;">Master digital video editing and motion graphics. Learn Adobe Premiere Pro and After Effects in our focused Certified Program.</p>
+      </div>
+    </header>
+
+    <section class="course-details-section">
+      <div class="container">
+        <div class="course-details-layout">
+
+          <div class="course-roadmap-col">
+            <div class="text-center mb-4">
+              <h2 class="fw-extrabold course-details-title">Syllabus Overview</h2>
+              <p class="text-muted mb-0">Browse through the modules of our Video Editing Certified Program. Switch between tabs to see Premiere Pro and After Effects details.</p>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 10px;">
+              <div class="col-12 col-lg-11">
+                <!-- Single Unified Certified Card -->
+                <article class="glass-path-card certified-card w-100" style="max-width: 100%; border: 1px solid rgba(15, 76, 255, 0.25); box-shadow: 0 20px 45px rgba(15, 76, 255, 0.12); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column;">
+                  <div class="glass-path-card-header" style="background: linear-gradient(135deg, #0F4CFF 0%, #28C7FA 100%); padding: 2.2rem 2rem;">
+                    <h3 class="glass-path-card-title">Video Editing Syllabus</h3>
+                    <div class="glass-path-card-meta">Adobe Premiere Pro & After Effects • 3 Months Program</div>
+                    <div class="glass-path-card-icon" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></div>
+                    <div class="glass-path-card-duration">3 Months</div>
+                  </div>
+                  
+                  <div class="glass-path-card-tabs" style="background: #F7FAFF; padding: 8px; border-bottom: 1px solid rgba(15, 76, 255, 0.08);">
+                    <button class="glass-path-tab-btn active" onclick="switchCardTab(this, 'premiere')">Adobe Premiere Pro</button>
+                    <button class="glass-path-tab-btn" onclick="switchCardTab(this, 'aftereffects')">Adobe After Effects</button>
+                  </div>
+                  
+                  <div class="glass-path-card-body" style="max-height: none; overflow: visible; min-height: 400px; background: #ffffff; padding: 2.5rem;">
+                    
+                    <!-- Premiere Pro Module Tab -->
+                    <div class="path-tab-panel active" data-tab="premiere">
+                      <div class="mb-4">
+                        <h4 class="h5 fw-bold text-primary mb-2">Module 1: Adobe Premiere Pro (Video Editing & Audio Cleanup)</h4>
+                        <p class="text-muted small">Learn timeline workflows, advanced cuts, keyframe animations, audio cleanup, color correction, and final project outputs.</p>
+                      </div>
+                      <div class="timeline-container">
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">1. Introduction to Adobe Premiere Pro</span>
+                              <span class="duration-badge">Premiere Pro Basics</span>
+                            </div>
+                            <p class="syllabus-text">What is video editing. What is Video Formats? What is Codec? What is Frame Rates? Adobe Premiere Pro software installation. Overview of panels. Creating and saving a new project. Open Premiere Pro, explore interface, and create a new project.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">2. Project Panel, Source Monitor, Timeline Panel</span>
+                              <span class="duration-badge">Media Management</span>
+                            </div>
+                            <p class="syllabus-text">Importing media, creating bins, organizing files. Trimming clips, In/Out points, Insert & Overwrite edits. Sequence creation, track controls, markers, snapping. Create a project and organize imported media. Trim and insert clips into the timeline. Arrange clips in the timeline with markers.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">3. Editing Tools</span>
+                              <span class="duration-badge">Timeline Tools</span>
+                            </div>
+                            <p class="syllabus-text">Playback controls, basic editing tools (Selection, Ripple, Rolling, Razor, Slip, Slide, Pen, Hand, Zoom). Perform edits using Razor and Ripple Edit tools.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">4. Effect Controls, Keyframes</span>
+                              <span class="duration-badge">Animations</span>
+                            </div>
+                            <p class="syllabus-text">Motion properties (Position, Scale, Rotation, Anchor Point). Opacity and Blend Modes. What are keyframes. Temporal interpolation types (Linear, Bezier, Ease In/Out). Apply a scale & position animation to a clip. Animate text opacity using keyframes.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">5. Effects & Transitions, Nesting & Speed Changes</span>
+                              <span class="duration-badge">Speed & FX</span>
+                            </div>
+                            <p class="syllabus-text">Video & audio effects, transitions, and rendering. Nesting sequences. Speed/duration changes, reverse, and speed ramping. Apply cross dissolve and directional blur between two clips. Create a slow-motion effect with speed ramping.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">6. Audio Editing, Audio Cleanup</span>
+                              <span class="duration-badge">Audio Tools</span>
+                            </div>
+                            <p class="syllabus-text">Audio track types (Mono vs Stereo). Audio levels, transitions, and presets. Denoise and audio channel adjustments. Apply constant power transition between two audio clips. Remove background noise from a dialogue clip.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">7. Color Correction & Color Grading</span>
+                              <span class="duration-badge">Color Correction</span>
+                            </div>
+                            <p class="syllabus-text">Difference between color correction & grading. Lumetri Color & Lumetri Scopes. Creative color adjustments and LUTs. Color formats (Rec.709, LOG, RAW). Correct exposure and white balance in a video. Apply a cinematic look using color grading.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">8. Titles & Graphics, Advanced Effects</span>
+                              <span class="duration-badge">Graphics & VFX</span>
+                            </div>
+                            <p class="syllabus-text">Text Tool, Essential Graphics, lower thirds, end roll credits. Green screen (Ultra Key), crop, warp stabilizer, picture-in-picture. Create and animate a lower third text. Replace a green screen background.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">9. Exporting Media</span>
+                              <span class="duration-badge">Export Settings</span>
+                            </div>
+                            <p class="syllabus-text">Export formats (MP4, MOV, JPEG, TIFF, PNG, WAV, MP3). Export settings for different platforms. Export a video in H.264 and QuickTime formats.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">10. Adobe Premiere Pro Final Project</span>
+                              <span class="duration-badge">Project Task</span>
+                            </div>
+                            <p class="syllabus-text">At least 4–5 video clips or images. Use at least 2 different video, 5 different Image transitions. Intro title (project name), End title (thank you / credits), One background music track. Export the final video in MP4 format.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- After Effects Module Tab -->
+                    <div class="path-tab-panel" data-tab="aftereffects">
+                      <div class="mb-4">
+                        <h4 class="h5 fw-bold text-primary mb-2">Module 2: Adobe After Effects (Motion Graphics & Visual Effects)</h4>
+                        <p class="text-muted small">Explore layers, transformations, text animator presets, shapes, masking, keying, motion graphics, and composition rendering.</p>
+                      </div>
+                      <div class="timeline-container">
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">1. Introduction to After Effects</span>
+                              <span class="duration-badge">AE Basics</span>
+                            </div>
+                            <p class="syllabus-text">What is After Effects? Difference between After Effects, Premiere Pro. After Effects software installation. Interface, workspace & tools overview. Creating a new project & composition. Importing images, video & audio. Open After Effects, explore interface, and Create a simple composition and import media.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">2. Understanding Layers & Transformations</span>
+                              <span class="duration-badge">Transform Properties</span>
+                            </div>
+                            <p class="syllabus-text">Understanding layers (Video, Text, Shape, Solid, Adjustment). Transform properties (Position, Scale, Rotation, Opacity, Anchor Point). Animate text or shape with keyframes.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">3. Working with Keyframes & Animation</span>
+                              <span class="duration-badge">Keyframes & Easing</span>
+                            </div>
+                            <p class="syllabus-text">Keyframes basics. Motion paths. Easing (Easy Ease, Graph Editor). Animate a text or shape moving across the screen.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">4. Working with Text Animation</span>
+                              <span class="duration-badge">Text Animators</span>
+                            </div>
+                            <p class="syllabus-text">Text layer properties. Preset text animations (Fade, Typewriter, Slide, Bounce). Create a title animation with text effect.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">5. Shapes & Masks</span>
+                              <span class="duration-badge">Masking</span>
+                            </div>
+                            <p class="syllabus-text">Shape layers vs Solid layers. Masks (Add, Subtract, Feather). Animate a shape reveal using masks.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">6. Effects & Presets</span>
+                              <span class="duration-badge">AE Effects</span>
+                            </div>
+                            <p class="syllabus-text">Applying Effects (Blur, Glow, Color Correction). Using Presets for quick animations. Add glow to text, blur background, and color correct a video.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">7. Motion Graphics Basics</span>
+                              <span class="duration-badge">Motion Graphics</span>
+                            </div>
+                            <p class="syllabus-text">Introduction to Motion Graphics. Using shape layers for design. Looping animation. Create a simple logo and icon animation.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">8. Green Screen & Blending</span>
+                              <span class="duration-badge">Keying</span>
+                            </div>
+                            <p class="syllabus-text">Chroma Keying (Keylight effect). Blending modes & opacity. Remove a green screen background. Blend two video layers creatively.</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">9. Rendering & Exporting</span>
+                              <span class="duration-badge">Rendering</span>
+                            </div>
+                            <p class="syllabus-text">Render Queue vs Adobe Media Encoder. Export settings (MP4, MOV, GIF).</p>
+                          </div>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="syllabus-card">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                              <span class="syllabus-title">10. After Effects Final Project</span>
+                              <span class="duration-badge">Intro Animation</span>
+                            </div>
+                            <p class="syllabus-text">Compile a 3-minute animated intro screen applying motion graphics, layers, easing, masks, keyframes, and blending effects.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="glass-path-card-footer" style="padding: 1.5rem 2rem; background: #ffffff; border-top: 1px solid rgba(15, 76, 255, 0.05); display: flex; justify-content: center;">
+                    <a href="thankyou.html" class="btn-enroll-path px-5 py-3 fs-6">ENROLL IN CERTIFIED PROGRAM</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="courses.html" class="btn btn-outline-primary rounded-4 px-4 py-2">Back to Courses</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placements CTA -->
+    <section class="placements-cta-section">
+      <div class="container">
+        <div class="placements-cta">
+          <h2>View Placement Success</h2>
+          <p>See students placed through our training program.</p>
+          <a href="placements.html?department=monz" class="placements-btn">Monz Placements</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4" style="background: linear-gradient(90deg, rgba(13,110,253,0.18), rgba(0,194,255,0.10));">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="text-muted small">&copy; <span id="year"></span> PUMO Technovation. All rights reserved.</div>
+
+      <div class="d-flex flex-column align-items-end gap-3" style="min-width: 280px;">
+        <div class="footer-history" aria-label="Previous/Next navigation">
+          <button id="historyPrevBtn" class="footer-history-btn" type="button" data-prev-url="course-details-ui-ux-design.html">&larr; PREV</button>
+          <button id="historyNextBtn" class="footer-history-btn" type="button" data-next-url="course-details-digital-marketing.html">NEXT &rarr;</button>
+        </div>
+        <div class="d-flex gap-3">
+          <a class="footer-link" href="#">Facebook</a>
+          <a class="footer-link" href="#">Instagram</a>
+          <a class="footer-link" href="#">LinkedIn</a>
+          <a class="footer-link" href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Chatbot -->
+  <div class="position-fixed" style="right:18px; bottom:18px; z-index:1051;">
+    <button id="chat-toggle" aria-label="Open AI chat"><i class="bi bi-robot"></i></button>
+    <div id="chat-widget" class="glass rounded-4 p-3">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div class="fw-bold">AI Career Bot</div>
+        <button class="btn btn-sm btn-outline-secondary" id="chat-close" type="button">✕</button>
+      </div>
+      <div class="d-flex gap-2 flex-wrap mb-2">
+        <button class="btn btn-sm btn-light" type="button" data-q="Which course is best for me?">Which course is best for me?</button>
+        <button class="btn btn-sm btn-light" type="button" data-q="Do you provide placements?">Do you provide placements?</button>
+      </div>
+      <div id="chat-messages" class="mb-2"></div>
+      <div class="input-group">
+        <input id="chat-input" class="form-control" placeholder="Ask something..." aria-label="Chat input">
+        <button id="chat-send" class="btn btn-glow text-white" type="button">Send</button>
+      </div>
+      <div class="mt-2 small text-muted">Try: “What is the course duration?”</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Card Tab Switching Logic
+    function switchCardTab(button, tabName) {
+      const card = button.closest('.glass-path-card');
+      if (!card) return;
+      
+      // Update button active state
+      card.querySelectorAll('.glass-path-tab-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      
+      // Update panel visibility
+      card.querySelectorAll('.path-tab-panel').forEach(panel => panel.classList.remove('active'));
+      const targetPanel = card.querySelector(`.path-tab-panel[data-tab="${tabName}"]`);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

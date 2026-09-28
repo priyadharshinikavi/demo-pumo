@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="About PUMO Technovation - Professional training institute providing career guidance and placement support." />
+  <title>About | PUMO TECHNOVATION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" href="pumologo.webp" type="image/webp" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about-map.css?v=3" />
+</head>
+<body class="page-fade">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-75 sticky-top">
+    <div class="container">
+<a class="navbar-brand" href="index.html" aria-label="PUMO">
+        <img src="pumologo.webp" alt="PUMO" style="height:48px; width:auto;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Premium Hero Section -->
+  <section class="about-hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="hero-badge animate-fade-in">Empowering Tech Leaders</div>
+          <h1 class="hero-title animate-fade-in">Pumo Technovation<br><span class="text-gradient">India Private Limited</span></h1>
+          <p class="hero-desc animate-fade-in" style="font-weight: 500; color: var(--pumo-navy);">We are India's Largest Design, Developer and Manufacturer of Fracture CON ROD's also Owning a Technical Campus Collaborated with world's leading companies like FANUC INDIA, MITSUBISHI CUTTING TOOLS, ACCURATE GAUGES, ADITYA MEASUREMENTS, RENISHAW & MITUTOYA (JAPAN).</p>
+          <p class="hero-desc animate-fade-in" style="font-size: 15px; margin-top: -15px;">Our total lab setup is focused for engineer’s and industries updating requirements. The tech campus is completely accelerating under the guidance of industrial experts having 27+ years’ experience and young aspirants. Pumo Technovation India Pvt Ltd is the first tech campus to have all facilities & labs in India to offer training courses and job assurance all under one roof.</p>
+          <div class="hero-cta animate-fade-in">
+            <a href="courses.html" class="btn btn-glow btn-lg px-4 py-3 rounded-3 pulse">Explore Advanced Programs</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="stats-glass-card animate-fade-in">
+            <h3 class="stats-card-title">PUMO by the Numbers</h3>
+            <div class="stats-grid">
+              <div class="stats-item">
+                <span class="stats-number">5+</span>
+                <span class="stats-label">Countries Active</span>
+              </div>
+              <div class="stats-item">
+                <span class="stats-number">29+</span>
+                <span class="stats-label">Training Hubs</span>
+              </div>
+              <div class="stats-item">
+                <span class="stats-number">10k+</span>
+                <span class="stats-label">Students Guided</span>
+              </div>
+              <div class="stats-item">
+                <span class="stats-number">95%</span>
+                <span class="stats-label">Placement Success</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Presence Section -->
+  <section class="global-presence-section" aria-label="Global Presence">
+    <div class="container">
+      <div class="presence-hero-header">
+        <h2 class="presence-title">Global Presence</h2>
+        <p class="presence-subtitle">Explore our professional training hubs and R&D centers serving students and industries worldwide.</p>
+      </div>
+
+      <!-- Country selector cards -->
+      <div id="country-cards-container" class="presence-countries-container" role="group" aria-label="Country select"></div>
+
+      <!-- City Grid Section -->
+      <div class="presence-grid-header">
+        <h3 id="city-grid-title" class="presence-grid-title">India Hubs</h3>
+      </div>
+      <div id="city-cards-container" class="city-cards-grid" aria-live="polite"></div>
+
+      <!-- Active City Branches Inline Panel -->
+      <div id="active-city-branches" class="active-city-branches-panel" style="display: none;">
+        <div class="active-branches-header">
+          <h3 id="active-city-title" class="active-city-title">City Locations</h3>
+          <button id="close-branches-btn" class="close-branches-btn" type="button" aria-label="Close branches">&times; Close</button>
+        </div>
+        <div id="active-branches-grid" class="active-branches-grid"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Leadership Section (MD profile) -->
+  <section class="leadership-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="md-image-wrapper animate-fade-in">
+            <img src="mohan_sir.png" class="md-image" alt="Mr. Mohan Kumar - Managing Director">
+            <div class="md-badge">Managing Director</div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="md-info-wrapper animate-fade-in">
+            <span class="md-title-tag">LEADERSHIP VISION</span>
+            <h2 class="md-heading">Mr. Mohan Kumar</h2>
+            <h3 class="md-subheading">Managing Director of PUMO and MONZ</h3>
+            <p class="md-quote">"PUMO Technovation is the first tech campus in India to offer specialized industrial training and guaranteed career placement under one roof. Our mission is to accelerate engineering talent under the guidance of industrial experts, aligning them with the exact requirements of global engineering giants."</p>
+            <div class="md-highlights">
+              <div class="highlight-item">
+                <span class="highlight-check"><i class="bi bi-check-lg"></i></span>
+                <span class="highlight-text">Direct guidance of experts with 27+ years experience</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-check"><i class="bi bi-check-lg"></i></span>
+                <span class="highlight-text">Technical campus collaborated with FANUC, MITSUBISHI, MITUTOYO & more</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-check"><i class="bi bi-check-lg"></i></span>
+                <span class="highlight-text">First in India to offer training and job assurance under one roof</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subtitle">The foundational principles that guide our academic programs and industry collaborations.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon"><i class="bi bi-lightbulb-fill text-warning"></i></div>
+            <h4 class="value-title">Innovation</h4>
+            <p class="value-desc">Embracing new technologies, advanced tools, and modern industrial frameworks.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon"><i class="bi bi-mortarboard-fill text-primary"></i></div>
+            <h4 class="value-title">Excellence</h4>
+            <p class="value-desc">Maintaining high academic standards and providing industry-expert instructors.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon"><i class="bi bi-people-fill text-success"></i></div>
+            <h4 class="value-title">Student First</h4>
+            <p class="value-desc">Offering dedicated career counseling, placement drives, and personal support.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon"><i class="bi bi-lightning-charge-fill text-info"></i></div>
+            <h4 class="value-title">Agility</h4>
+            <p class="value-desc">Constantly updating our syllabus to match rapid changes in corporate requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <footer class="py-4" style="background: linear-gradient(90deg, rgba(13,110,253,0.18), rgba(0,194,255,0.10));">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <div class="text-muted small">&copy; <span id="year"></span> PUMO Technovation. All rights reserved.</div>
+
+      <div class="d-flex flex-column align-items-end gap-3" style="min-width: 280px;">
+        <!-- History navigation (in-footer, bottom-right) -->
+        <div class="footer-history" aria-label="Previous/Next navigation">
+          <button id="historyPrevBtn" class="footer-history-btn" type="button" data-prev-url="departments.html">&larr; PREV</button>
+          <button id="historyNextBtn" class="footer-history-btn" type="button" data-next-url="courses.html">NEXT &rarr;</button>
+        </div>
+
+        <!-- Social links -->
+        <div class="d-flex gap-3">
+          <a class="footer-link" href="#">Facebook</a>
+          <a class="footer-link" href="#">Instagram</a>
+          <a class="footer-link" href="#">LinkedIn</a>
+          <a class="footer-link" href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- AI Chatbot -->
+  <div class="position-fixed" style="right:18px; bottom:18px; z-index:1051;">
+    <button id="chat-toggle" aria-label="Open AI chat"><i class="bi bi-chat-dots-fill"></i></button>
+    <div id="chat-widget" class="glass rounded-4 p-3">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <div class="fw-bold">AI Career Bot</div>
+        <button class="btn btn-sm btn-outline-secondary" id="chat-close" type="button">✕</button>
+      </div>
+      <div class="d-flex gap-2 flex-wrap mb-2">
+        <button class="btn btn-sm btn-light" type="button" data-q="Hi">Hi</button>
+        <button class="btn btn-sm btn-light" type="button" data-q="Hello">Hello</button>
+        <button class="btn btn-sm btn-light" type="button" data-q="What courses are available">What courses are available?</button>
+      </div>
+      <div id="chat-messages" class="mb-2"></div>
+      <div class="input-group">
+        <input id="chat-input" class="form-control" placeholder="Ask something..." aria-label="Chat input">
+        <button id="chat-send" class="btn btn-glow text-white" type="button">Send</button>
+      </div>
+      <div class="mt-2 small text-muted">Try: “Which branch is nearest?”</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script src="js/branches-map.js?v=3"></script>
+
+
+
+  <script>
+    var y = document.getElementById('year');
+    if(y) y.textContent = new Date().getFullYear();
+
+
+
+
+
+
+    // Quick question buttons
+    var widget = document.getElementById('chat-widget');
+    var input = document.getElementById('chat-input');
+    document.querySelectorAll('[data-q]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(widget && widget.style.display !== 'block') widget.style.display = 'block';
+        if(input){ input.value = btn.getAttribute('data-q'); input.focus(); }
+      });
+    });
+
+    var closeBtn = document.getElementById('chat-close');
+    if(closeBtn){
+      closeBtn.addEventListener('click', function(){
+        var w = document.getElementById('chat-widget');
+        if(w) w.style.display='none';
+      });
+    }
+  </script>
+</body>
+</html>
+

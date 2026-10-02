@@ -203,11 +203,23 @@
     <div id="loading-overlay">
       <div class="spinner"></div>
       <div class="loading-text">Preparing 3D Flipbook...</div>
+      <div id="error-display" style="color: red; margin-top: 15px; background: rgba(0,0,0,0.8); padding: 10px; border-radius: 5px; font-family: monospace; display: none;"></div>
     </div>
     
     <!-- Flipbook Target Element -->
     <div id="flipbook-container"></div>
   </main>
+  
+  <script>
+    window.addEventListener('error', function(e) {
+      document.getElementById('error-display').style.display = 'block';
+      document.getElementById('error-display').innerText += e.message + '\n';
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+      document.getElementById('error-display').style.display = 'block';
+      document.getElementById('error-display').innerText += (e.reason && e.reason.message || e.reason) + '\n';
+    });
+  </script>
 
   <!-- jQuery (Required by dFlip) -->
   <script src="dflip/js/libs/jquery.min.js"></script>
@@ -225,9 +237,12 @@
   <script>
     // Set DearFlip library paths
     window.DFLIP_LIB_PATH = "dflip/js/libs/";
+    if (window.DFLIP && DFLIP.defaults) {
+      DFLIP.defaults.pdfjsWorkerSrc = "dflip/js/libs/pdf.worker.min.js";
+    }
     
-    // Set PDF.js worker path
-    if (window.pdfjsLib) {
+    // Set PDF.js worker path safely
+    if (window.pdfjsLib && window.pdfjsLib.GlobalWorkerOptions) {
       window.pdfjsLib.GlobalWorkerOptions.workerSrc = "dflip/js/libs/pdf.worker.min.js";
     } else if (window.PDFJS) {
       window.PDFJS.workerSrc = "dflip/js/libs/pdf.worker.min.js";

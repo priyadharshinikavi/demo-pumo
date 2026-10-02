@@ -215,6 +215,10 @@
   <!-- PDF.js core library for page checking and rendering -->
   <script src="dflip/js/libs/pdf.min.js"></script>
   
+  <!-- 3D Dependencies for WebGL -->
+  <script src="dflip/js/libs/three.min.js"></script>
+  <script src="dflip/js/libs/mockup.min.js"></script>
+  
   <!-- dFlip core JS -->
   <script src="dflip/js/dflip.min.js"></script>
 
@@ -252,7 +256,7 @@
 
       // Initialize the standard dFlip flipbook
       var options = {
-        webgl: true, // Enable Three.js 3D WebGL render
+        webgl: false, // Fallback to CSS 3D for better compatibility
         height: '100%',
         width: '100%',
         autoEnableOutline: false,
